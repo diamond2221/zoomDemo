@@ -429,6 +429,7 @@ export default {
             return scale - 5
         },
         scrollIng(e) {
+            e.preventDefault();
             const { contentEl } = this.$refs;
             let { scale } = this;
             if (e.wheelDelta > 0) {
@@ -446,6 +447,7 @@ export default {
             this.layerX = Math.round(e.clientX - (w * ratioL));
             this.layerY = Math.round(e.clientY - (h * ratioT));
             this.scale = scale;
+            return false
         },
         mouseenter() {
             this.$refs.scrollEl && this.$refs.scrollEl.addEventListener("mousewheel", this.scrollIng);

@@ -5,7 +5,7 @@ Vue.use(Router);
 
 export const constantRoutes = [
     {
-        path: "/demo",
+        path: "/",
         component: () => import("@/views/demo/index.vue"),
         meta: {
             title: "demo"
@@ -20,7 +20,7 @@ const createRouter = () => {
         routes: constantRoutes
     });
     router.afterEach((to, from) => {
-        document.title = to.meta.title
+        document.title = to.meta.title || '';
     })
     return router
 }
