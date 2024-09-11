@@ -9,7 +9,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "path-to-regexp": "2.4.0",
+    "path-to-regexp": "3.3.0",
     "vue": "2.6.10",
     "vue-router": "3.0.6"
   },
